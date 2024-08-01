@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: rgb(241, 241, 241); /* White */
+    --foreground: rgba(12, 12, 12, 1); /* Dark Blue */
+    --background-secondary: rgb(255, 255, 255, 1);
+    --foreground-secondary: rgba(244, 244, 250, 1);
+    --component-background:rgb(31, 41, 55);
+    --container-card: rgb(255, 255, 255);
+    --hover: rgba(84, 84, 255);
+    --gray: rgba(128, 128, 128, 1);
+    --card: rgba(255, 255, 255, 1); /* White */
+    --card-foreground: rgba(12, 12, 12, 1); /* Dark Blue */
+    --popover: rgba(255, 255, 255, 1); /* White */
+    --popover-foreground: rgba(12, 12, 12, 1); /* Dark Blue */
+    --primary: rgb(84, 84, 255); /* Darker Blue */
+    --primary-foreground: rgba(244, 244, 250, 1); /* Almost White */
+    --secondary: rgba(244, 246, 248, 1); /* Very Light Blue */
+    --secondary-foreground: rgba(28, 30, 49, 1); /* Darker Blue */
+    --heading: rgba(12, 12, 12, 1);
+    --muted: rgba(244, 246, 248, 1); /* Very Light Blue */
+    --muted-foreground: rgba(157, 161, 172, 1); /* Medium Blue */
+    --accent: rgba(244, 246, 248, 1); /* Very Light Blue */
+    --accent-foreground: rgba(28, 30, 49, 1); /* Darker Blue */
+    --destructive: rgba(255, 85, 85, 1); /* Bright Red */
+    --destructive-foreground: rgba(244, 244, 250, 1); /* Almost White */
+    --border: rgba(233, 234, 238, 1); /* Light Gray */
+    --input: rgb(227, 227, 227); /* Light Gray */
+    --ring: rgb(18, 181, 210); /* Dark Blue */
+    --shadow: rgb(128, 114, 255);
+    --radius: 0.5rem; /* Border radius */
+    --chart-1: rgba(255, 165, 0, 1); /* Orange */
+    --chart-2: rgba(46, 139, 87, 1); /* Teal */
+    --chart-3: rgba(0, 100, 0, 1); /* Dark Teal */
+    --chart-4: rgba(255, 255, 0, 1); /* Yellow */
+    --chart-5: rgba(255, 228, 196, 1); /* Peach */
+  }
+
+  .dark {
+    --background: rgb(39, 39, 39); /* Dark Blue */
+    --foreground: rgba(244, 244, 250, 1); /* Almost White */
+    --background-secondary: rgb(76, 76, 76);
+    --foreground-secondary-background: rgb(0, 0, 0); 
+    --component-background:rgb(17, 24, 39);
+    --container-card: rgb(17, 24, 39);
+    --hover: rgba(39, 0, 107);
+    --gray: rgb(172, 172, 172);
+    --card: rgba(12, 12, 12, 1); /* Dark Blue */
+    --card-foreground: rgba(244, 244, 250, 1); /* Almost White */
+    --popover: rgba(12, 12, 12, 1); /* Dark Blue */
+    --popover-foreground: rgba(244, 244, 250, 1); /* Almost White */
+    --primary: rgb(227, 227, 227); /* Almost White */
+    --primary-foreground: rgba(28, 30, 49, 1); /* Darker Blue */
+    --secondary: rgba(43, 43, 43, 1); /* Very Dark Gray */
+    --secondary-foreground: rgba(244, 244, 250, 1); /* Almost White */
+    --heading: rgb(255, 255, 255);
+    --muted: rgba(43, 43, 43, 1); /* Very Dark Gray */
+    --muted-foreground: rgba(157, 161, 172, 1); /* Medium Blue */
+    --accent: rgba(43, 43, 43, 1); /* Very Dark Gray */
+    --accent-foreground: rgba(244, 244, 250, 1); /* Almost White */
+    --destructive: rgba(160, 0, 0, 1); /* Dark Red */
+    --destructive-foreground: rgba(244, 244, 250, 1); /* Almost White */
+    --border: rgba(43, 43, 43, 1); /* Very Dark Gray */
+    --input: rgba(43, 43, 43, 1); /* Very Dark Gray */
+    --ring: rgba(107, 107, 107, 1); /* Medium Gray */
+    --shadow: rgb(81, 62, 255);
+    --chart-1: rgba(0, 0, 255, 1); /* Blue */
+    --chart-2: rgba(0, 128, 0, 1); /* Green */
+    --chart-3: rgba(255, 140, 0, 1); /* Dark Orange */
+    --chart-4: rgba(138, 43, 226, 1); /* Purple */
+    --chart-5: rgba(255, 20, 147, 1); /* Pink */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  span {
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.80rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--heading);
+  }
+
+}

@@ -27,6 +27,8 @@
     --accent-foreground: rgba(28, 30, 49, 1); /* Darker Blue */
     --destructive: rgba(255, 85, 85, 1); /* Bright Red */
     --destructive-foreground: rgba(244, 244, 250, 1); /* Almost White */
+    --sucess: rgb(2, 169, 75); /* Teal */
+    --sucess-foreground: rgba(244, 244, 250, 1); /* Almost White */
     --border: rgba(233, 234, 238, 1); /* Light Gray */
     --input: rgb(227, 227, 227); /* Light Gray */
     --ring: rgb(18, 181, 210); /* Dark Blue */
@@ -63,6 +65,8 @@
     --accent-foreground: rgba(244, 244, 250, 1); /* Almost White */
     --destructive: rgba(160, 0, 0, 1); /* Dark Red */
     --destructive-foreground: rgba(244, 244, 250, 1); /* Almost White */
+    --sucess: rgb(0, 111, 48); /* Teal */
+    --sucess-foreground: rgba(244, 244, 250, 1); /* Almost White */
     --border: rgba(43, 43, 43, 1); /* Very Dark Gray */
     --input: rgba(43, 43, 43, 1); /* Very Dark Gray */
     --ring: rgba(107, 107, 107, 1); /* Medium Gray */

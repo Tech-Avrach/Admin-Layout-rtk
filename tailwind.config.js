@@ -41,6 +41,10 @@ module.exports = {
           DEFAULT: "var(--destructive)", // Bright Red
           foreground: "var(--destructive-foreground)", // Almost White
         },
+        success: {
+          DEFAULT: "var(--sucess)", // Teal
+          foreground: "var(--sucess-foreground)", // Almost White
+        },
         muted: {
           DEFAULT: "var(--muted)", // Very Light Blue
           foreground: "var(--muted-foreground)", // Medium Blue

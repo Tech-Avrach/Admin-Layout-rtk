@@ -12,6 +12,7 @@ import ResetPassword from '@/components/ResetPassword';
 import UserList from '@/components/User/All';
 import NotFound from '@/components/PageNotFound';
 import Forbidden from '@/components/Forbidden';
+import AddUser from '@/components/User/AddUser';
 // import People from '@/components/Payments/DemoPage';
 
 const AppMain: React.FC = () => {
@@ -23,13 +24,11 @@ const AppMain: React.FC = () => {
                 <Route element={<ProtectedRoutes isLoggedIn={isLoggedIn} />}>
                     <Route element={<Layout />}>
                         <Route path="/dashboard" element={<Dashboard />} />
+
                         <Route path='user'>
                             <Route path='list' element={<UserList />} />
+                            <Route path='add' element={<AddUser />} />
                         </Route>
-                        <Route path="*" element={<NotFound />} />
-                        <Route path="/forbidden" element={<Forbidden />} />
-
-
                     </Route>
                 </Route>
 
@@ -39,6 +38,10 @@ const AppMain: React.FC = () => {
                     <Route path="reset-password" element={<ResetPassword />} />
                     <Route path="/" element={<Login />} />
                 </Route>
+
+                <Route path="*" element={<NotFound />} />
+                <Route path="forbidden" element={<Forbidden />} />
+
             </Routes>
         </div>
     );

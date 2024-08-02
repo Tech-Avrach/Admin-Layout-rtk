@@ -92,7 +92,7 @@ import {
             onChange={onSearchChange}
             className="max-w-sm"
           />
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger>
               <Button variant="outline" className="ml-4">
                 Columns
@@ -110,7 +110,7 @@ import {
                 </DropdownMenuCheckboxItem>
               ))}
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
           <Button onClick={() => downloadToExcel()} className="ml-4">
             Export to Excel
           </Button>

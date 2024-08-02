@@ -67,6 +67,10 @@ module.exports = {
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
+          wiggle: {
+            '0%, 100%': { transform: 'rotate(-3deg)' },
+            '50%': { transform: 'rotate(3deg)' },
+          },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
@@ -76,6 +80,8 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        pulse: 'pulse 2s infinite',
       },
       backgroundImage: {
         'login-gradient': 'linear-gradient(85deg, #4a90e2, #9013fe)',

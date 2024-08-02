@@ -52,6 +52,16 @@ export const menus: MenuItem[] = [
     icon: Folder 
   },
   { 
+    label: "404 Error", 
+    to: "/404", 
+    icon: Folder 
+  },
+  { 
+    label: "forbidden", 
+    to: "/forbidden", 
+    icon: Folder 
+  },
+  { 
     label: "Cart", 
     to: "/", 
     icon: ShoppingCart 

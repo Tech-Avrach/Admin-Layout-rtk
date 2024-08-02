@@ -10,6 +10,8 @@ import Dashboard from '@/components/DashBoard';
 import ResetPassword from '@/components/ResetPassword';
 
 import UserList from '@/components/User/All';
+import NotFound from '@/components/PageNotFound';
+import Forbidden from '@/components/Forbidden';
 // import People from '@/components/Payments/DemoPage';
 
 const AppMain: React.FC = () => {
@@ -24,7 +26,9 @@ const AppMain: React.FC = () => {
                         <Route path='user'>
                             <Route path='list' element={<UserList />} />
                         </Route>
-                    
+                        <Route path="*" element={<NotFound />} />
+                        <Route path="/forbidden" element={<Forbidden />} />
+
 
                     </Route>
                 </Route>

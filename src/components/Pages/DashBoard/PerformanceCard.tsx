@@ -1,7 +1,7 @@
 import React from "react";
 import { Users ,Home } from "lucide-react";
 import { PerformanceCardProps } from "@/@Typings/interface";
-import ContaierCard from "../ui/containerCard";
+import ContaierCard from "../../ui/containerCard";
 
 const PerformanceCard: React.FC<PerformanceCardProps> = ({ title, count, color, icon }) => {
   return (

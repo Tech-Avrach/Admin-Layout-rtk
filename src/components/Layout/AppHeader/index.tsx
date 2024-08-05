@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Sun, Moon, User, ChevronDown } from 'lucide-react';
+import { Sun, Moon } from 'lucide-react';
 import UserBox from './UserBox';
 
 const Header = () => {
@@ -30,5 +30,4 @@ const Header = () => {
     </header>
   );
 };
-
 export default Header;

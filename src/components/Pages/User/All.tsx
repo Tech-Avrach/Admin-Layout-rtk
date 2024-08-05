@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import PageContainer from '../Layout/PageContainer';
+import PageContainer from '../../Layout/PageContainer';
 import { User } from 'lucide-react';
-import { users } from "@/components/Dummy/users";
+import { users } from "@/components/Static/Dummy/users";
 import xlsx, { IJsonSheet } from "json-as-xlsx";
 import DataTable from '@/components/ui/data-table';
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown, TrashIcon, EyeIcon, EditIcon } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox"; 
 import { Button } from "@/components/ui/button"; 
-import ContaierCard from '../ui/containerCard';
+import ContaierCard from '../../ui/containerCard';
 
 // Add type definitions if needed
 type User = {
@@ -116,6 +116,7 @@ function All() {
           id: "actions",
           cell: ({ row }) => {
             const person = row.original;
+            console.log(person)
             return (
               <div className="flex gap-3">
                 <EyeIcon className="h-5 w-5 text-primary cursor-pointer"/>

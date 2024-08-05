@@ -1,6 +1,6 @@
 import AddUserInfo from './AddUserInfo'
-import PageContainer from '../Layout/PageContainer'
-import ContaierCard from '../ui/containerCard'
+import PageContainer from '../../Layout/PageContainer'
+import ContaierCard from '../../ui/containerCard'
 import { User } from 'lucide-react'
 
 function AddUser() {

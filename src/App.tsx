@@ -3,7 +3,7 @@
 // import ForgotPassword from '@/components/ForgotPassword';
 // import Header from './components/AppHeader';
 import Nav from './components/Layout/AppNav';
-import Login from './components/Login';
+import Login from './components/Auth/Login';
 // import SideBar from '@/components/AppSidebar';
 
 function App() {

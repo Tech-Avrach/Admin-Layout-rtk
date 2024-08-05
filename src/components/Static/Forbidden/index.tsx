@@ -1,6 +1,5 @@
 // src/components/Forbidden.js
 
-import React from 'react';
 
 const Forbidden = () => {
   return (

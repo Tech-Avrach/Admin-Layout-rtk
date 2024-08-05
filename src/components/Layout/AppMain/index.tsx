@@ -1,27 +1,39 @@
-import React, { useEffect, useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import React, { lazy, Suspense} from 'react';
+import { Routes, Route } from 'react-router-dom';
 import ProtectedRoutes from '@/routes/ProtectedRoutes'; 
 import PublicRoutes from '@/routes/PublicRoutes';
 
-import Layout from '@/components/Layout';
-import Login from '@/components/Login';
-import ForgotPassword from '@/components/ForgotPassword';
-import Dashboard from '@/components/DashBoard';
-import ResetPassword from '@/components/ResetPassword';
-
-import UserList from '@/components/User/All';
-import NotFound from '@/components/PageNotFound';
-import Forbidden from '@/components/Forbidden';
-import AddUser from '@/components/User/AddUser';
+// import Layout from '@/components/Layout';
+// import Login from '@/components/Auth/Login';
+// import ForgotPassword from '@/components/Auth/ForgotPassword';
+// import Dashboard from '@/components/DashBoard';
+// import ResetPassword from '@/components/Auth/ResetPassword';
+// import UserList from '@/components/Pages/User/All';
+// import NotFound from '@/components/Static/PageNotFound';
 // import People from '@/components/Payments/DemoPage';
 
+
+
+const Layout = lazy(() => import("@/components/Layout"))
+const Login = lazy(() => import("@/components/Auth/Login"))
+const ForgotPassword = lazy(() => import("@/components/Auth/ForgotPassword"))
+const Dashboard = lazy(() => import("@/components/Pages/DashBoard"))
+const ResetPassword = lazy(() => import("@/components/Auth/ResetPassword"))
+const UserList = lazy(() => import("@/components/Pages/User/All"))
+const NotFound = lazy(() => import("@/components/Static/PageNotFound"))
+const Forbidden = lazy(() => import("@/components/Static/Forbidden"))
+const AddUser = lazy(() => import("@/components/Pages/User/AddUser"))
+
+
 const AppMain: React.FC = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    // const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const isLoggedIn = true
 
     return (
         <div>
+            <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-                <Route element={<ProtectedRoutes isLoggedIn={isLoggedIn} />}>
+                <Route  element={<ProtectedRoutes isLoggedIn={isLoggedIn} />}>
                     <Route element={<Layout />}>
                         <Route path="/dashboard" element={<Dashboard />} />
 
@@ -43,6 +55,7 @@ const AppMain: React.FC = () => {
                 <Route path="forbidden" element={<Forbidden />} />
 
             </Routes>
+            </Suspense>
         </div>
     );
 }

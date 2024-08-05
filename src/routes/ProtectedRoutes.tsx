@@ -1,7 +1,7 @@
 import React, { useEffect, Suspense } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import Loader from '@/components/ui/loader';
-
+import Layout from '@/components/Layout';
 
 interface ProtectedRoutesProps {
     isLoggedIn: boolean;
@@ -18,14 +18,15 @@ const ProtectedRoutes: React.FC<ProtectedRoutesProps> = ({ isLoggedIn }) => {
 
     return isLoggedIn ? (
         <Suspense fallback={
-            <div>
-                <Loader/>
-            </div>
-            }
-        >
-            <Outlet />
+            <Layout>
+                <Loader />
+            </Layout>
+        }>
+            <Layout>
+                <Outlet />
+            </Layout>
         </Suspense>
-    ) : null
+    ) : null;
 }
 
 export default ProtectedRoutes;

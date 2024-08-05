@@ -7,6 +7,7 @@ import {
     DropdownMenuContent,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
+import { Link } from "react-router-dom"
   
 function UserBox() {
     return (
@@ -46,7 +47,9 @@ function UserBox() {
         <button className="bg-gray-800 text-white px-3 py-1 rounded-lg shadow-md">Logout</button>
       </div>
       <div className="px-4 py-3 bg-white">
-        <button className="text-hover font-semibold">Edit My Profile</button>
+        <Link to="/edit-profile">
+          <button className="text-hover font-semibold">Edit My Profile</button>
+        </Link>
       </div>
     </div>
         </DropdownMenuContent>

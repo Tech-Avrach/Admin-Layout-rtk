@@ -14,15 +14,20 @@ import PublicRoutes from '@/routes/PublicRoutes';
 
 
 
-const Layout = lazy(() => import("@/components/Layout"))
+// const Layout = lazy(() => import("@/components/Layout"))
 const Login = lazy(() => import("@/components/Auth/Login"))
 const ForgotPassword = lazy(() => import("@/components/Auth/ForgotPassword"))
-const Dashboard = lazy(() => import("@/components/Pages/DashBoard"))
 const ResetPassword = lazy(() => import("@/components/Auth/ResetPassword"))
-const UserList = lazy(() => import("@/components/Pages/User/All"))
+
 const NotFound = lazy(() => import("@/components/Static/PageNotFound"))
 const Forbidden = lazy(() => import("@/components/Static/Forbidden"))
+
+const Dashboard = lazy(() => import("@/components/Pages/DashBoard"))
+
+const UserList = lazy(() => import("@/components/Pages/User/All"))
 const AddUser = lazy(() => import("@/components/Pages/User/AddUser"))
+
+const ShowUser = lazy(() => import("@/components/Pages/CurrentUser/ShowUser"))
 
 
 const AppMain: React.FC = () => {
@@ -31,17 +36,20 @@ const AppMain: React.FC = () => {
 
     return (
         <div>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<ProtectedRoutes isLoggedIn={isLoggedIn} />}>
             <Routes>
                 <Route  element={<ProtectedRoutes isLoggedIn={isLoggedIn} />}>
-                    <Route element={<Layout />}>
+                    {/* <Route element={<Layout />}> */}
+
+                        <Route path='/edit-profile' element={<ShowUser />} />
+
                         <Route path="/dashboard" element={<Dashboard />} />
 
                         <Route path='user'>
                             <Route path='list' element={<UserList />} />
                             <Route path='add' element={<AddUser />} />
                         </Route>
-                    </Route>
+                    {/* </Route> */}
                 </Route>
 
                 <Route element={<PublicRoutes isLoggedIn={isLoggedIn} />}>

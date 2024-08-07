@@ -36,7 +36,7 @@ const AppMain: React.FC = () => {
 
     return (
         <div>
-            {/* <Suspense fallback={<ProtectedRoutes isLoggedIn={isLoggedIn} />}> */}
+            <Suspense fallback={<ProtectedRoutes isLoggedIn={isLoggedIn} />}>
             <Routes>
                 <Route  element={<ProtectedRoutes isLoggedIn={isLoggedIn} />}>
                     {/* <Route element={<Layout />}> */}
@@ -63,7 +63,7 @@ const AppMain: React.FC = () => {
                 <Route path="forbidden" element={<Forbidden />} />
 
             </Routes>
-            {/* </Suspense> */}
+            </Suspense>
         </div>
     );
 }

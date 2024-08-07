@@ -7,9 +7,10 @@ import {
     DropdownMenuContent,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
   
 function UserBox() {
+  const navigate = useNavigate();
     return (
       <div className="">
       <DropdownMenu>
@@ -44,7 +45,7 @@ function UserBox() {
             <div className="text-white text-sm">anish@capitalnumbers.com</div>
           </div>
         </div>
-        <button className="bg-gray-800 text-white px-3 py-1 rounded-lg shadow-md">Logout</button>
+        <button onClick={() => navigate("/login")} className="bg-gray-800 text-white px-3 py-1 rounded-lg shadow-md">Logout</button>
       </div>
       <div className="px-4 py-3 bg-white">
         <Link to="/edit-profile">
@@ -59,4 +60,3 @@ function UserBox() {
   }
 
   export default UserBox
-  

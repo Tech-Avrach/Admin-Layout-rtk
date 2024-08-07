@@ -1,4 +1,4 @@
-import { Grid, Settings, BarChart2, User, Heart, MessageSquare, Folder, ShoppingCart } from "lucide-react";
+import { Grid, User, Folder, ChartNoAxesCombined} from "lucide-react";
 
 import { MenuItem } from "@/@Typings/interface";
 
@@ -7,7 +7,7 @@ export const menus: MenuItem[] = [
   { 
     label: "dashboard",
     to: "/dashboard", 
-    icon: Grid 
+    icon: ChartNoAxesCombined 
   },
   { 
     label: "user",
@@ -24,34 +24,6 @@ export const menus: MenuItem[] = [
     ]
   },
   { 
-    label: "messages", 
-    to: "/", 
-    icon: MessageSquare 
-  },
-  { 
-    label: "analytics", 
-    icon: BarChart2, 
-    content: [
-      { 
-        label: "Overview", 
-        to: "/analytics/overview" 
-      },
-      { 
-        label: "Reports", 
-        to: "/analytics/reports" 
-      },
-      { 
-        label: "Data", 
-        to: "/analytics/data" 
-      }
-    ]
-  },
-  { 
-    label: "File Manager", 
-    to: "/", 
-    icon: Folder 
-  },
-  { 
     label: "404 Error", 
     to: "/404", 
     icon: Folder 
@@ -60,20 +32,5 @@ export const menus: MenuItem[] = [
     label: "forbidden", 
     to: "/forbidden", 
     icon: Folder 
-  },
-  { 
-    label: "Cart", 
-    to: "/", 
-    icon: ShoppingCart 
-  },
-  {
-    label: "Saved", 
-    to: "/", 
-    icon: Heart 
-  },
-  { 
-    label: "Setting", 
-    to: "/", 
-    icon: Settings 
   },
 ];

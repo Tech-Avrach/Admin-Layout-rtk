@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import ProtectedRoutes from '@/routes/ProtectedRoutes'; 
 import PublicRoutes from '@/routes/PublicRoutes';
 
-// import Layout from '@/components/Layout';
+import Layout from '@/components/Layout';
 // import Login from '@/components/Auth/Login';
 // import ForgotPassword from '@/components/Auth/ForgotPassword';
 // import Dashboard from '@/components/DashBoard';
@@ -32,11 +32,11 @@ const ShowUser = lazy(() => import("@/components/Pages/CurrentUser/ShowUser"))
 
 const AppMain: React.FC = () => {
     // const [isLoggedIn, setIsLoggedIn] = useState(true);
-    const isLoggedIn = true
+    const isLoggedIn = true;
 
     return (
         <div>
-            <Suspense fallback={<ProtectedRoutes isLoggedIn={isLoggedIn} />}>
+            {/* <Suspense fallback={<ProtectedRoutes isLoggedIn={isLoggedIn} />}> */}
             <Routes>
                 <Route  element={<ProtectedRoutes isLoggedIn={isLoggedIn} />}>
                     {/* <Route element={<Layout />}> */}
@@ -63,7 +63,7 @@ const AppMain: React.FC = () => {
                 <Route path="forbidden" element={<Forbidden />} />
 
             </Routes>
-            </Suspense>
+            {/* </Suspense> */}
         </div>
     );
 }

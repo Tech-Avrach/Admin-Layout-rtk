@@ -10,13 +10,13 @@
     --foreground-secondary: rgba(244, 244, 250, 1);
     --component-background:rgb(31, 41, 55);
     --container-card: rgb(255, 255, 255);
-    --hover: rgba(84, 84, 255);
+    --hover: rgba(31, 41, 55);
     --gray: rgba(128, 128, 128, 1);
     --card: rgba(255, 255, 255, 1); /* White */
     --card-foreground: rgba(12, 12, 12, 1); /* Dark Blue */
     --popover: rgba(255, 255, 255, 1); /* White */
     --popover-foreground: rgba(12, 12, 12, 1); /* Dark Blue */
-    --primary: rgb(84, 84, 255); /* Darker Blue */
+    --primary: rgb(31, 41, 55); /* Darker Blue */
     --primary-foreground: rgba(244, 244, 250, 1); /* Almost White */
     --secondary: rgba(244, 246, 248, 1); /* Very Light Blue */
     --secondary-foreground: rgba(28, 30, 49, 1); /* Darker Blue */
@@ -32,7 +32,7 @@
     --border: rgba(233, 234, 238, 1); /* Light Gray */
     --input: rgb(227, 227, 227); /* Light Gray */
     --ring: rgb(18, 181, 210); /* Dark Blue */
-    --shadow: rgb(128, 114, 255);
+    --shadow: rgb(31, 41, 55);
     --radius: 0.5rem; /* Border radius */
     --chart-1: rgba(255, 165, 0, 1); /* Orange */
     --chart-2: rgba(46, 139, 87, 1); /* Teal */
@@ -48,7 +48,7 @@
     --foreground-secondary-background: rgb(0, 0, 0); 
     --component-background:rgb(17, 24, 39);
     --container-card: rgb(17, 24, 39);
-    --hover: rgba(39, 0, 107);
+    --hover: rgba(17, 24, 39);
     --gray: rgb(172, 172, 172);
     --card: rgba(12, 12, 12, 1); /* Dark Blue */
     --card-foreground: rgba(244, 244, 250, 1); /* Almost White */
@@ -70,7 +70,7 @@
     --border: rgba(43, 43, 43, 1); /* Very Dark Gray */
     --input: rgba(43, 43, 43, 1); /* Very Dark Gray */
     --ring: rgba(107, 107, 107, 1); /* Medium Gray */
-    --shadow: rgb(81, 62, 255);
+    --shadow: rgb(17, 24, 39);
     --chart-1: rgba(0, 0, 255, 1); /* Blue */
     --chart-2: rgba(0, 128, 0, 1); /* Green */
     --chart-3: rgba(255, 140, 0, 1); /* Dark Orange */

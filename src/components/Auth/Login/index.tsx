@@ -44,7 +44,7 @@ const Login = () => {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-login-gradient w-full">
+    <div className="flex items-center justify-center min-h-screen bg-component w-full">
       <div className="bg-background p-5 rounded-lg shadow-2xl max-w-lg w-full">
         <h2 className="mb-5 text-center text-xl">Please sign in to your account below.</h2>
         <Form {...form}>
@@ -84,6 +84,7 @@ const Login = () => {
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
+                  className="border-component"
                 />
               </FormControl>
               <div className="space-y-1 leading-none">
@@ -96,8 +97,8 @@ const Login = () => {
         />
               
         <div className="flex items-center justify-between mt-4 border-t pt-4 bg">
-            <Link to={"/forgot-password"} className="text-primary hover:underline text-sm">Recover Password</Link>
-            <Button type="submit" variant="default">Login to Dashboard</Button>
+            <Link to={"/forgot-password"} className="text-component hover:underline text-sm">Recover Password</Link>
+            <Button type="submit" className="bg-component">Login to Dashboard</Button>
           </div>
       </form>
     </Form>

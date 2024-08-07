@@ -37,7 +37,7 @@ const ForgotPassword = () => {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-login-gradient">
+    <div className="flex items-center justify-center min-h-screen bg-component">
       <div className="bg-background p-5 rounded-lg shadow-2xl max-w-lg w-full items-center">
         <h2 className="mb-1 text-center text-xl">Forgot your Password?</h2>
         <span className="">Enter your email to receive a password reset email</span>
@@ -58,7 +58,7 @@ const ForgotPassword = () => {
         />
         <div className="flex items-center justify-between mt-4 border-t pt-4 bg">
             <Link to={"/login"} className="text-primary hover:underline text-sm">Sign in with your exesting account</Link>
-            <Button type="submit" variant="default">Send Reset Code</Button>
+            <Button type="submit" className="bg-component">Send Reset Code</Button>
           </div>
       </form>
     </Form>

@@ -7,7 +7,7 @@ interface PublicRoutesProps {
 }
 
 const PublicRoutes: React.FC<PublicRoutesProps> = ({ isLoggedIn }) => {
-    return isLoggedIn ? (
+    return isLoggedIn && false ? (
         <Navigate to="/dashboard" replace />
     ) : (
         <Suspense fallback={<Loader />}>
